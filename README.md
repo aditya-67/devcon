@@ -4,6 +4,8 @@ A simple DevCon app to display the schedule of events with details.
 
 I deployed the app on Netlify, https://devcon-demo.netlify.app/
 
+I used some UX inspiration from https://pretalx.com/democon/schedule/
+
 ### Functionalities
 
 - Show events based on date and rooms.
@@ -21,14 +23,14 @@ I deployed the app on Netlify, https://devcon-demo.netlify.app/
 
 ## Running the app locally
 
-CLone the repo and cd into the folder.
+Clone the repo and cd into the folder.
 
 #### Install the dependencies
 ```bash
 npm install
 ```
 
-#### Start the app in development mode (hot-code reloading, error reporting, etc.)
+#### Start the app in development mode
 ```bash
 npm run start
 ```
