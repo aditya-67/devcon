@@ -2,7 +2,7 @@
 
 A simple DevCon app to display the schedule of events with details.
 
-I deployed the app on Netlify, below is the link
+I deployed the app on Netlify, https://devcon-demo.netlify.app/
 
 ### Functionalities
 
