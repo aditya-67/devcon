@@ -40,7 +40,7 @@ function Dates({ value, index, rooms, events }) {
     >
       {value === index && (
         <Fragment>
-          <div className="d-flex flex-row align-items-top mt-2 d-none d-lg-flex">
+          <div className="d-flex flex-row align-items-top mt-2">
             {rooms.map((room) => {
               return (
                 <div
@@ -98,7 +98,6 @@ function Dates({ value, index, rooms, events }) {
               );
             })}
           </div>
-          <div className="d-sm-none">Testing</div>
         </Fragment>
       )}
     </div>
