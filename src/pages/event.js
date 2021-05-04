@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Typography from "@material-ui/core/Typography";
 import Speaker from "./../components/speaker.js";
+import { baseURL } from "./../endpoint.js";
 
 const useStyles = makeStyles({
   bullet: {
@@ -37,7 +38,7 @@ function Event() {
   useEffect(() => {
     axios
       .get(
-        "https://pretalx.com/api/events/democon/talks/" + id + "/?format=json"
+        baseURL + "/talks/" + id + "/?format=json"
       )
       .then((response) => {
         setEventDetails(response.data);
