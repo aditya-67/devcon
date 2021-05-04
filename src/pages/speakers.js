@@ -6,7 +6,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Speaker from "./../components/speaker";
-import { baseURL } from './../endpoint.js';
+import { baseURL } from "./../endpoint.js";
 
 const useStyles = makeStyles({
   root: {

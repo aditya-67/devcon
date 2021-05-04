@@ -40,66 +40,65 @@ function Dates({ value, index, rooms, events }) {
     >
       {value === index && (
         <Fragment>
-        <div className="d-flex flex-row align-items-top mt-2 d-none d-lg-flex">
-          {rooms.map((room) => {
-            return (
-              <div
-                className="d-flex flex-column align-items-center w-100"
-                key={room.name.en}
-              >
-                <Typography variant="h5" component="h2">
-                  {room.name.en}
-                </Typography>
-                <hr className="w-100" />
-                <div className="p-4">
-                  {items.map((event) => {
-                    if (event.slot.room.en === room.name.en) {
-                      return (
-                        <Link href={"/event/" + event.code} key={event.code}>
-                          <Card className={classes.root + " m-3"}>
-                            <CardContent>
-                              <Typography variant="h5" component="h3">
-                                {event.title}
-                              </Typography>
-                              <Typography
-                                className={classes.title}
-                                color="textSecondary"
-                                gutterBottom
-                              >
-                                {event.speakers.map((speaker) => {
-                                  if (event.speakers.length > 1) {
-                                    return speaker.name + ", ";
-                                  } else {
-                                    return speaker.name;
+          <div className="d-flex flex-row align-items-top mt-2 d-none d-lg-flex">
+            {rooms.map((room) => {
+              return (
+                <div
+                  className="d-flex flex-column align-items-center w-100"
+                  key={room.name.en}
+                >
+                  <Typography variant="h5" component="h2">
+                    {room.name.en}
+                  </Typography>
+                  <hr className="w-100" />
+                  <div className="p-4">
+                    {items.map((event) => {
+                      if (event.slot.room.en === room.name.en) {
+                        return (
+                          <Link href={"/event/" + event.code} key={event.code}>
+                            <Card className={classes.root + " m-3"}>
+                              <CardContent>
+                                <Typography variant="h5" component="h3">
+                                  {event.title}
+                                </Typography>
+                                <Typography
+                                  className={classes.title}
+                                  color="textSecondary"
+                                  gutterBottom
+                                >
+                                  {event.speakers.map((speaker) => {
+                                    if (event.speakers.length > 1) {
+                                      return speaker.name + ", ";
+                                    } else {
+                                      return speaker.name;
+                                    }
+                                  })}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                  Start time:{" "}
+                                  {
+                                    new Date(event.slot.start)
+                                      .toTimeString()
+                                      .split(" ")[0]
                                   }
-                                })}
-                              </Typography>
-                              <Typography variant="body2" component="p">
-                                Start time:{" "}
-                                {
-                                  new Date(event.slot.start)
-                                    .toTimeString()
-                                    .split(" ")[0]
-                                }
-                              </Typography>
-                              <Typography variant="body2" component="p">
-                                Duration: {event.duration} min
-                              </Typography>
-                            </CardContent>
-                          </Card>
-                        </Link>
-                      );
-                    }
-                    else{
-                      return null;
-                    }
-                  })}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                  Duration: {event.duration} min
+                                </Typography>
+                              </CardContent>
+                            </Card>
+                          </Link>
+                        );
+                      } else {
+                        return null;
+                      }
+                    })}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="d-sm-none">Testing</div>
+              );
+            })}
+          </div>
+          <div className="d-sm-none">Testing</div>
         </Fragment>
       )}
     </div>
