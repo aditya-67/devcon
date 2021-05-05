@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
+import { Link } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -55,7 +55,7 @@ function Dates({ value, index, rooms, events }) {
                     {items.map((event) => {
                       if (event.slot.room.en === room.name.en) {
                         return (
-                          <Link href={"/event/" + event.code} key={event.code}>
+                          <Link to={"/event/" + event.code} key={event.code}>
                             <Card className={classes.root + " m-3"}>
                               <CardContent>
                                 <Typography variant="h5" component="h3">

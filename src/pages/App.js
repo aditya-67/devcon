@@ -3,7 +3,6 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Schedule from "./schedule";
 import Speakers from "./speakers";
-import Link from "@material-ui/core/Link";
 
 function App() {
   const [showSchedule, setShowSchedule] = useState(true);
@@ -11,7 +10,7 @@ function App() {
   return (
     <Container>
       <div className="d-flex flex-column align-items-center justify-content-center">
-        <Link href="/"><h1 className="m-3">DevCon</h1></Link>
+        <h1 className="m-3">DevCon</h1>
         <div className="d-flex flex-column align-items-center w-100 m-2">
           <div className="d-flex flex-row align-items-center justify-content-between">
             <Button

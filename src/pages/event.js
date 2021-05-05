@@ -10,6 +10,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Typography from "@material-ui/core/Typography";
 import Speaker from "./../components/speaker.js";
 import { baseURL } from "./../endpoint.js";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   bullet: {
@@ -59,9 +60,9 @@ function Event() {
         <div className="d-flex flex-column align-items-center">
           <Card className={classes.root + " m-3 w-100 px-4"}>
             <CardContent>
-              <Button href="/" variant="contained" primary className="mb-2">
+              <Link to="/"><Button variant="contained" className="mb-2">
                 Go back
-              </Button>
+              </Button></Link>
               <Typography variant="h5" component="h3" className="mb-3">
                 <strong>{eventDetails.title}</strong>
               </Typography>
@@ -89,8 +90,8 @@ function Event() {
               </Typography>
 
               <div className="d-flex flex-column align-items-start">
-                {eventDetails.speakers.map((speaker) => {
-                  return <Speaker speakerDetails={speaker} />;
+                {eventDetails.speakers.map((speaker, index) => {
+                  return <Speaker speakerDetails={speaker} key={index} />;
                 })}
               </div>
             </CardContent>

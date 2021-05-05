@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -67,11 +66,9 @@ function Speakers() {
         <div className="d-flex flex-column align-items-center">
           <Card className={classes.root + " m-3 w-100 px-4"}>
             <CardContent>
-              {speakers.map((speaker) => {
+              {speakers.map((speaker, index) => {
                 return (
-                  <Link href={"/speaker/" + speaker.code} key={speaker.code}>
-                    <Speaker speakerDetails={speaker} />{" "}
-                  </Link>
+                    <Speaker speakerDetails={speaker} key={index} />
                 );
               })}
             </CardContent>

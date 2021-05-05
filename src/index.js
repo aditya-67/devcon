@@ -12,7 +12,6 @@ ReactDOM.render(
 			<Switch>
 				<Route exact path="/" component={App} />
 				<Route exact path="/event/:id" component={Event} />
-				<Route exact path="/speaker/:id" component={App} />
 			</Switch>
 		</Router>
 	</React.StrictMode>,
