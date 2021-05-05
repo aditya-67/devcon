@@ -17,6 +17,7 @@ I used some UX inspiration from https://pretalx.com/democon/schedule/
 
 - Data can be cleaned and shown better in the components.
 - Display the events in a calendar type of view.
+- Modularize individual components for 30 min and 90 min events
 - UI can be made responsive.
 - Individual speaker pages, this currently will load the homepage :P. Can make individual pages for speakers.
 - Save events based to Google Calendar.
